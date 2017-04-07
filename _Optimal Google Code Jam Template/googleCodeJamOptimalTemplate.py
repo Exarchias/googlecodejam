@@ -13,6 +13,36 @@ def mainCheckFunction(checkFunctionsProperty):
         if checkFunctionsProperty == True:
                 return True
 
+def loader():
+    global countForT
+    for N in fileForInput:
+        print("itIsTheFirstLine now is " + str(itIsTheFirstLine))
+        fileForOutput.write("itIsTheFirstLine now is " + str(itIsTheFirstLine))
+        # print("itIsTheFirstLine now is " + str(itIsTheFirstLine) end='\n' file=f)
+        if itIsTheFirstLine == True:
+            firstLineCorrection(N)
+        else:
+            result = mainCalculativFunction(N)
+
+
+
+def save():
+    countForT += 1
+    print("the T which represent the number of lines with input data, now is " + str(T))
+    fileForOutput.write("the T which represent the number of lines with input data, now is " + str(T))
+    if iterationsCheck(countForT):
+        # here add code when the answer comes in the end as a final result.
+        print("the result of the main calculative fuction know as mainCalculativFunction() now is " + result)
+        fileForOutput.write(
+             "the result of the main calculative fuction know as mainCalculativFunction() now is " + result)
+    else:
+        # Here add code if there are many answers that are coming separately with every iteration.
+        # here is the best location for the printFromArray()function.
+        print("the N now which is the value of the last input now is " + str(N))
+        fileForOutput.write("the N now which is the value of the last input now is " + str(N))
+
+
+
 #The function mainCalculativFunction() solves the logical problem of the exercise.
 #Now it works like a SUM function.       
 def mainCalculativFunction(inputProperty):
