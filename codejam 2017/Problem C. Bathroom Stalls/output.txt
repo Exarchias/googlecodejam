@@ -1,0 +1,2 @@
+itIsTheFirstLine now is TrueitIsTheFirstLine now is FalseitIsTheFirstLine now is FalseitIsTheFirstLine now is FalseitIsTheFirstLine now is FalseitIsTheFirstLine now is Falsethe T which represent the number of lines with input data, now is 5
+the result of the main calculative fuction know as mainCalculativFunction() now is 350
