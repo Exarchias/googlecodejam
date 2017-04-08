@@ -18,7 +18,7 @@ def mainCheckFunction(checkFunctionsProperty):
                 return True
 
 def loader():
-    global result
+    global result, countForT
     for N in fileForInput:
         print("itIsTheFirstLine now is " + str(itIsTheFirstLine))
         fileForOutput.write("itIsTheFirstLine now is " + str(itIsTheFirstLine))
@@ -26,26 +26,14 @@ def loader():
         if itIsTheFirstLine == True:
             firstLineCorrection(N)
         else:
-            result = mainCalculativFunction(N)
+            caser(N, i)
+            #countForT = countForT + 1
+    #print(str(caserArray))
 
 
 
 def save():
-    global countForT
-    countForT = 5
-    print("the T which represent the number of lines with input data, now is " + str(T))
-    fileForOutput.write("the T which represent the number of lines with input data, now is " + str(T))
-    if iterationsCheck(countForT):
-        # here add code when the answer comes in the end as a final result.
-        print("the result of the main calculative fuction know as mainCalculativFunction() now is " + result)
-        fileForOutput.write(
-             "the result of the main calculative fuction know as mainCalculativFunction() now is " + result)
-    else:
-        # Here add code if there are many answers that are coming separately with every iteration.
-        # here is the best location for the printFromArray()function.
-        #print("the N now which is the value of the last input now is " + str(N))
-        #fileForOutput.write("the N now which is the value of the last input now is " + str(N))
-        print("Here I need to add some code if I need to use this part")
+        print(str(caserArray))
 
 # this the function that break the stream to cases
 # this function is inspired by the DWNLD problem on codechef
@@ -65,17 +53,23 @@ def caser(inputFromN, inputForI):
         print("dwnldK is " + str(dwnldK))
         countForDwnldN = caserTemporalValues[1]
         print("countForDwnldN is " + str(countForDwnldN))
+        #super sos. I am still trying to figure out i.
+        #statment below, active by default.
+        #the problem is probably a +1, -1 bug.
         i = int(i) + 1
         caserArray.append([])
         caserArray[i - 1].append(dwnldK)
+        #print(str(caserArray))
     else:
         print("countForDwnldN is NOT 0")
         print("countForDwnldN is " + str(countForDwnldN))
+        #i = int(i) + 1
         print("i is " + str(i))
         caserArray[i - 1].append(caserTemporalValues)
         countForDwnldN = int(countForDwnldN) - 1
         print("caserArray is " + str(caserArray[i - 1]))
-        # i = int(i) + 1
+        #i = int(i) + 1
+        #print(str(caserArray))
 
 # it needs to run after the caser()
 # it repairs if necessary, (and if possible), the caserArray
