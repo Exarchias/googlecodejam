@@ -38,6 +38,7 @@ def save():
 # this the function that break the stream to cases
 # this function is inspired by the DWNLD problem on codechef
 # please use global i and countForDwnldN outside the function
+#on the parameter of inputForI just insert the global variable I
 # also use the repair function to repair the caserArray
 def caser(inputFromN, inputForI):
     global countForDwnldN, dwnldK, caserArray, i
@@ -49,7 +50,7 @@ def caser(inputFromN, inputForI):
     if int(countForDwnldN) == 0:
         print("countForDwnldN is 0")
         print("caserTemporalValues is " + str(caserTemporalValues))
-        dwnldK = caserTemporalValues[0]
+        dwnldK = caserTemporalValues
         print("dwnldK is " + str(dwnldK))
         countForDwnldN = caserTemporalValues[1]
         print("countForDwnldN is " + str(countForDwnldN))
