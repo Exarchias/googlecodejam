@@ -34,6 +34,7 @@ def loader():
 
 def save():
         print(str(caserArray))
+        fileForOutput.write(str(caserArray))
 
 # this the function that break the stream to cases
 # this function is inspired by the DWNLD problem on codechef
