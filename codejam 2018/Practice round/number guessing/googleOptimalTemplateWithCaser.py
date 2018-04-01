@@ -24,15 +24,24 @@ working = True
 
 
 def setNewMax(newMAX, oldMAX):
-    if newMAX < oldMAX:
+    if int(newMAX) < int(oldMAX):
+        print("The newmax is smaller than oldmax so I will return newmax")
+        print("Newmax=", newMAX, " OldMAX=", oldMAX)
         return newMAX
     else:
+        print("The newmax is bigger than oldmax so I will return oldmax")
+        print("Newmax=", newMAX, " OldMAX=", oldMAX)
         return oldMAX
 
+
 def setNewMin(newMIN, oldMIN):
-    if newMIN > oldMIN:
+    if int(newMIN) > int(oldMIN):
+        print("The newmin is bigger than oldmin so I will return newmin")
+        print("Newmax=", newMIN, " OldMAX=", oldMIN)
         return newMIN
     else:
+        print("The newmin is smaller than oldmin so I will return oldmin")
+        print("Newmin=", newMIN, " OldMIN=", oldMIN)
         return oldMIN
 
 
